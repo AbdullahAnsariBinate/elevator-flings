@@ -230,7 +230,7 @@ const AppContainer = ({
         style={containerAnimatedStyle}
       >
         {/* {Gradient} */}
-        <View flex width={'100%'} backgroundColor='#ffffff' style={[styles.pad, newPad]}>
+        <View flex width={'100%'} backgroundColor='#ffffff' style={[styles.pad, newPad]} >
           {HeaderView}
           {ContentView}
         </View>

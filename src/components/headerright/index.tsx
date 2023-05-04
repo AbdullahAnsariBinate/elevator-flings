@@ -5,10 +5,10 @@ import FastImage from 'react-native-fast-image'
 import { icons } from '../../../assets/images'
 import { screens } from '../../screens'
 
-const HeaderRight = () => {
-  const navBar = React.useCallback(() => {
-    screens.push('Component8', 'ChatList')
-  }, [])
+const HeaderRight = (props:any) => {
+  const navBar = () => {
+    screens.push('Component3', 'ChatList')
+  }
   const noti = React.useCallback(() => {
     screens.push('Component8', 'Notification')
   }, [])

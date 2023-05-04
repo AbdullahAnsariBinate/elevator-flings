@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native'
 import { theme } from '../../../utils/constants'
 import { responsiveFontSize, responsiveHeight } from 'react-native-responsive-dimensions'
 
-export const styles = StyleSheet.create({
+export const  styles = StyleSheet.create({
   scrollBar: {
     marginHorizontal: 15,
     justifyContent: 'center',

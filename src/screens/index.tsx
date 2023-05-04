@@ -142,16 +142,16 @@ export const screens = generateRNNScreens(
               component: {
                 id: 'HeaderRight',
                 name: 'HeaderRight',
-                passProps: {
-                  componentId: 'Component8',
-                },
+                // passProps: {
+                //   componentId: 'Component8',
+                // },
               },
             },
           ],
-          visible: true,
-          title: {
-            text: 'Home, John',
-          },
+          visible: false,
+          // title: {
+          //   text: 'Home, John',
+          // },
         },
       },
     },
@@ -317,7 +317,7 @@ export const screens = generateRNNScreens(
                 id: 'HeaderRight2',
                 name: 'HeaderRight2',
                 passProps: {
-                  componentId: 'Component9',
+                  // componentId: 'Component9',
                 },
               },
             },

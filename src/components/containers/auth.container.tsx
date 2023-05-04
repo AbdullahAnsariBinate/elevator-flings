@@ -35,7 +35,7 @@ const AuthContainer = ({
   return (
     <View flex bg-white>
       <KeyboardAwareScrollView style={styles.contentContainerStyle}>
-        <View flex paddingT-20 {...modifiers}>
+        <View flex paddingT-0 {...modifiers}>
           {Header}
           {Content}
           {Footer}

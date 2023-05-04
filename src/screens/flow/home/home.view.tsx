@@ -5,7 +5,7 @@ import { Searchbar } from 'react-native-paper'
 import { theme } from '../../../utils/constants'
 import FastImage from 'react-native-fast-image'
 import { icons, images } from '../../../../assets/images'
-import { TabController, View, TouchableOpacity } from 'react-native-ui-lib'
+import { TabController, View } from 'react-native-ui-lib'
 import EventPost from '../../../components/eventpost'
 import { data } from './data'
 import { FlatList } from 'react-native-gesture-handler'
@@ -17,11 +17,21 @@ import { screens } from '../..'
 import { styles } from './home.styles'
 import { responsiveWidth } from 'react-native-responsive-dimensions'
 import { TabView, SceneMap, TabBar } from 'react-native-tab-view'
-import Animated from 'react-native-reanimated'
-
+import { CustomHeader } from '../../../components/customheader'
+import { TouchableOpacity } from 'react-native'
 const HomeView = (props: HomeComponentTypes) => {
   const [searchQuery, setSearchQuery] = React.useState<string>('')
   const { componentId } = useStateContext<NavigationComponentProps>()
+
+
+
+  const handleMessage = React.useCallback(() => {
+    screens.push(componentId, 'ChatList')
+  }, [])
+  const handleNotification = React.useCallback(() => {
+    screens.push(componentId, 'Notification')
+  }, [])
+
 
   const handlePropertydetail = React.useCallback(() => {
     screens.push(componentId, 'PropertyDetail')
@@ -104,7 +114,11 @@ const HomeView = (props: HomeComponentTypes) => {
   )
 
   return (
-    <Containers.AppContainer
+    <Containers.HomeConatiner
+      Header={
+        <CustomHeader leftText='Home, John' msgPress={handleMessage} notiPress={handleNotification} />
+
+      }
       Content={
         <>
           <Searchbar
